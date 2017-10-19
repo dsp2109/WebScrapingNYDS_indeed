@@ -12,10 +12,12 @@ from scrapy.exporters import CsvItemExporter
 class ValidateItemPipeline(object):
 
     def process_item(self, item, spider):
-        if not all(item.values()):#may need to relax this condition
-            raise DropItem("Missing values!")
-        else:
-            return item
+        ###relaxing this condition
+        # if not all(item.values()):
+        #     raise DropItem("Missing values!")
+        # else:
+        #     return item
+        return item
 
 class WriteItemPipeline(object):
 
