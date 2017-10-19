@@ -4,8 +4,7 @@ import scrapy
 class indeed_review_spider(scrapy.Spider):
     name = 'indeed_scrapy'
     allowed_urls = ['https://www.indeed.com/']
-    start_urls = ['https://www.indeed.com/Best-Places-to-Work/2017-US-Fortune-500-Companies',
-                  'https: // www.indeed.com / Best - Places - to - Work?y = 2017 & cc = US & d = Fortune + 500 + Companies & start = 25']
+    start_urls = ['https://www.indeed.com/Best-Places-to-Work?y=2017&cc=US&d=Fortune+500+Companies&start=25']
     #early stage of project (oct17) starting at company review page
 
     def parse(self, response):
